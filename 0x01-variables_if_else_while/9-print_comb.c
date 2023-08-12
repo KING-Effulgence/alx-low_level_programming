@@ -6,14 +6,18 @@
  */
 int main(void)
 {
-	char lower = 'z';
+	char A  = '0';
 
-	while (lower >= 'a')
+	while (A <= '9')
 	{
-		putchar(lower);
-		lower--;
+	putchar(A);
+	if (A <= '8')
+	{
+	putchar(',');
+	putchar(' ');
+	}
+	A++;
 	}
 	putchar('\n');
 	return (0);
 }
-
