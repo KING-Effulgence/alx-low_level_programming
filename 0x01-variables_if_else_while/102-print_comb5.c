@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Entry point
  *
@@ -7,30 +10,21 @@
 
 int main(void)
 {
-	int i, j;
-	int a, b, c, d;
+	int p, q;
 
-	for  (i = '0'; i <= 99; i++)
+	for (p = 0; p <= 98; p++)
 	{
-		a = i / 10;
-		b = i % 10;
-		for (j = '0'; j <= 99; j++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			c = j / 10;
-			d = j % 10;
-			if (a < c || (a == c && b < d))
-			{
-				putchar(a + '0');
-				putchar(b + '0');
-				putchar(' ');
-				putchar(c + '0');
-				putchar(d + '0');
-				if (a != '9' && b != 8)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
+			if (p == 98 && q == 99)
+			continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
