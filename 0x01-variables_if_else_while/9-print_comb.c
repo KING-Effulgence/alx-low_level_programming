@@ -6,15 +6,18 @@
  */
 int main(void)
 {
-	char A  = '0';
+	int A  = 0;
 
-	while (A <= '9')
+	while (A <= 9)
 	{
-	putchar(A);
-	if (A <= '8')
+	putchar(A + '0');
+	if (A <= '9')
+	{
+	if (A != 9)
 	{
 	putchar(',');
 	putchar(' ');
+	}
 	}
 	A++;
 	}
